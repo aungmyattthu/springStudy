@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Hello World</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</head>
+<body>
+	<div class="container mt-4">
+		<h1>Division of Myanmar</h1>
+		<div class="row row-cols-3">
+			<div class="col" th:each="item:${list}">
+				<div class="card mb-3">
+					<div class="card-body">
+						<h5 class="card-title" th:text="${item.name}"></h5>
+						<p th:text="${item.capital}" class="card-text"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
